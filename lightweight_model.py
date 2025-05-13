@@ -354,10 +354,6 @@ def visualize_samples(X, Y, model, n=5, apply_crf=False):
 if __name__ == "__main__":
     configure_for_performance()
 
-    # — UPDATE THESE PATHS —
-    # RGB_DIR  = "/Users/varad/.../rgb"
-    # NIR_DIR  = "/Users/varad/.../nir"
-    # MASK_DIR = "/Users/varad/.../gt"
     RGB_DIR = "/Users/varad/Documents/RESEARCH-PROJECT/jesi_06_13/rgb"
     NIR_DIR = "/Users/varad/Documents/RESEARCH-PROJECT/jesi_06_13/nir"
     MASK_DIR = "/Users/varad/Documents/RESEARCH-PROJECT/jesi_06_13/gt"
