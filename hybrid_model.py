@@ -836,12 +836,11 @@ def main():
     RGB_DIR = "/Users/varad/Documents/RESEARCH-PROJECT/jesi_05_18/rgb"
     NIR_DIR = "/Users/varad/Documents/RESEARCH-PROJECT/jesi_05_18/nir"
     MASK_DIR = "/Users/varad/Documents/RESEARCH-PROJECT/jesi_05_18/gt"
-    IMG_SIZE = (128, 128)  # Resize images to this size
-    MAX_IMAGES = None  # Set to None to use all images
-    BATCH_SIZE = 4  # Batch size for training
-    EPOCHS = 70 # Maximum number of epochs
-    AUGMENTATION_FACTOR = 3  # How much to augment training data
-    USE_CRF = True  # Whether to apply CRF post-processing
+    IMG_SIZE = (128, 128)  
+    MAX_IMAGES = None 
+    BATCH_SIZE = 4  
+    EPOCHS = 70 
+    AUGMENTATION_FACTOR = 3  
 
     try:
         # Load dataset
@@ -878,9 +877,9 @@ def main():
         total_pixels = np.sum(class_pixels)
         # Use inverse frequency with additional weighting for the minority class (weed)
         weights = np.array([
-            1.0,  # Soil weight
-            total_pixels / (class_pixels[1] * 3),  # Crop weight
-            total_pixels / (class_pixels[2] * 3) * 2  # Weed weight (doubled)
+            1.0,  
+            total_pixels / (class_pixels[1] * 3),  
+            total_pixels / (class_pixels[2] * 3) * 2  
         ])
         # Normalize weights
         weights = weights / np.sum(weights) * 3
@@ -977,5 +976,3 @@ def main():
 # Run the script if executed directly
 if __name__ == "__main__":
     main()
-
-##THis is the working hybrid model for the project
